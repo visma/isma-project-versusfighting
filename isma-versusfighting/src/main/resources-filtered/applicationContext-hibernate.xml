@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+    <!-- SessionFactories -->
+    <bean id="sessionFactoryVGTournament"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.connection.provider_class">
+                    org.hibernate.connection.DriverManagerConnectionProvider
+                </prop>
+                <prop key="hibernate.connection.driver_class">${databaseJdbcDriver}</prop>
+                <prop key="hibernate.connection.username">${databaseUser}</prop>
+                <prop key="hibernate.connection.password">${databasePassword}</prop>
+                <prop key="hibernate.connection.url">${databaseUrlVersusFighting}</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+                <prop key="hibernate.connection.autocommit">true</prop>
+            </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>org.isma.web.versusfighting.model.Player</value>
+            </list>
+        </property>
+        <property name="annotatedPackages">
+            <list>
+                <value>org.isma.web.versusfighting.model</value>
+            </list>
+        </property>
+    </bean>
+</beans>

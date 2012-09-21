@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Versus Fighting Tournament-->
+    <bean id="vgTournamentMenuAction" class="org.isma.web.versusfighting.action.VGTournamentMenuAction">
+    </bean>
+    <bean id="vgTournamentPlayersAction" class="org.isma.web.versusfighting.action.VGTournamentPlayersAction">
+        <constructor-arg ref="vgTournamentManager"/>
+    </bean>
+    <bean id="vgTournamentGameSettingsAction" class="org.isma.web.versusfighting.action.VGTournamentGameSettingsAction">
+        <constructor-arg ref="vgTournamentManager"/>
+    </bean>
+    <bean id="vgTournamentFightersChoiceAction"
+          class="org.isma.web.versusfighting.action.VGTournamentFightersChoiceAction">
+        <constructor-arg ref="vgTournamentManager"/>
+    </bean>
+    <bean id="vgTournamentFightAction" class="org.isma.web.versusfighting.action.VGTournamentFightAction">
+        <constructor-arg ref="vgTournamentManager"/>
+    </bean>
+    <bean id="vgTournamentResultAction" class="org.isma.web.versusfighting.action.VGTournamentResultAction">
+        <constructor-arg ref="vgTournamentManager"/>
+    </bean>
+</beans>

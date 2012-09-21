@@ -1,0 +1,126 @@
+/* Style General */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: #DDDDFF;
+    border-width: 1px;
+}
+
+#superglobal {
+    position: relative;
+    min-height: 100%;
+}
+
+#global {
+    position: relative;
+    min-height: 100%;
+    margin: auto;
+    padding-left: 30px;
+    padding-bottom: 70px;
+    /*width: 600px;*/
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    /*background: url('images/bg_pied.png') repeat-x;*/
+}
+
+a {
+    font-family: 'Press Start 2P', cursive;
+    /*font-style: oblique;*/
+    font-size: 10px;
+}
+
+.videogamefont {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+.videogame {
+    background: #EEEEFF;
+    font-family: 'Press Start 2P', cursive;
+
+    border-width: 1px;
+    border-spacing: 5px;
+    border-style: solid;
+    border-collapse: separate;
+
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Titres */
+h1, h2 {
+    font-family: 'Bangers', cursive;
+    color: #450a0a;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 {
+}
+
+input {
+    background: #EEEEFF;
+}
+
+select {
+    background: #EEEEFF;
+}
+
+table {
+    background: #EEEEFF;
+    border-color: black;
+    border-width: 1px;
+    border-spacing: 0px;
+    border-style: solid;
+    border-collapse: separate;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+th {
+    /*background: #CCCCFF;*/
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+tr {
+    /*background: #EEEEFF;*/
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+td {
+    padding: 2px;
+}
+
+.tableau th{
+    background: #DDDDEE;
+}
+.tableau td{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.casting {
+    border-width: 0px;
+    background: transparent;
+}

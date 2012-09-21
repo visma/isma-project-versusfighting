@@ -1,0 +1,58 @@
+/* Style General */
+body {
+    background: #F0F8FF;
+    border-width: 10px;
+}
+/* Titres */
+h1, h2 {
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
+
+h2 {
+    background-color: #d3d3d3;
+}
+
+p {
+    border-width: 1px;
+    border-style: solid;
+    color: red;
+    background-color: #7fffd4;
+}
+/* Tables */
+table {
+    background-color: #E8F8FF;
+
+    border-width: 1px;
+    border-spacing: 5px;
+    border-style: solid;
+    border-color: #d3d3d3;
+    border-collapse: separate;
+
+    font-weight: bold;
+    font-size: 12px;
+}
+
+th {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+td {
+    font-weight: normal;
+    font-family: sans-serif;
+}
+/* Saisies */
+input {
+    font-style: normal;
+    background: #E0F0FF;
+}
+
+input[type='button'], input[type='submit'] {
+    border: 1px inset black;
+}
+
+select {
+    background: #E0F0FF;
+}

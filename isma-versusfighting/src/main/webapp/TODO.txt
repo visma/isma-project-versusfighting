@@ -1,0 +1,5 @@
+Jsp :
+
+- mieux gérer la structure avec <div>, <span>, <p>...
+- éviter les <br/>
+- introduire des variables lors des <s:if> pour éviter les gros copier/coller

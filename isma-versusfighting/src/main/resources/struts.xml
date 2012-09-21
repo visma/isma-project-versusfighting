@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="visma" extends="struts-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <!-- Fridge -->
+        <action name="fridge" class="fridgeAction" method="execute">
+            <result name="success">/fridge.jsp</result>
+        </action>
+        <action name="removeFood" class="fridgeAction" method="removeFood">
+            <result name="success">/fridge.jsp</result>
+        </action>
+        <action name="addFood" class="fridgeAction" method="addFood">
+            <result name="success">/fridge.jsp</result>
+        </action>
+        <action name="addFoodFamily" class="fridgeAction" method="addFoodFamily">
+            <result name="success">/fridge.jsp</result>
+        </action>
+
+        <!-- VideoGame Tournament -->
+        <action name="vgTournament" class="vgTournamentMenuAction" method="execute">
+            <result name="success">/vgTournament_menu.jsp</result>
+        </action>
+        <!-- VideoGame Tournament -->
+        <action name="next" class="vgTournamentMenuAction" method="next">
+            <result name="success" type="redirectAction">playersSelection</result>
+        </action>
+        <action name="playersSelection" class="vgTournamentPlayersAction" method="execute">
+            <result name="success">/vgTournament_playersChoice.jsp</result>
+        </action>
+        <action name="resetGameSession" class="vgTournamentPlayersAction" method="resetGameSession">
+            <result name="success">/vgTournament_playersChoice.jsp</result>
+        </action>
+        <action name="savePlayer" class="vgTournamentPlayersAction" method="savePlayer">
+            <result name="success">/vgTournament_playersChoice.jsp</result>
+        </action>
+        <action name="registerPlayer" class="vgTournamentPlayersAction" method="registerPlayer">
+            <result name="success">/vgTournament_playersChoice.jsp</result>
+        </action>
+        <action name="validatePlayers" class="vgTournamentPlayersAction">
+            <result type="redirectAction">gameSettings</result>
+        </action>
+        <action name="gameSettings" class="vgTournamentGameSettingsAction" method="execute">
+            <result name="success">/vgTournament_gameSettings.jsp</result>
+        </action>
+        <action name="validateGameSettings" class="vgTournamentGameSettingsAction" method="validateGameSettings">
+            <result name="success" type="redirectAction">fightersChoice</result>
+        </action>
+        <action name="fightersChoice" class="vgTournamentFightersChoiceAction" method="execute">
+            <result name="success">/vgTournament_fightersChoice.jsp</result>
+        </action>
+        <action name="validateFightersChoice" class="vgTournamentFightersChoiceAction" method="validateFightersChoice">
+            <result name="success">/vgTournament_fightersChoice.jsp</result>
+        </action>
+        <action name="changePlayerForFightersChoice" class="vgTournamentFightersChoiceAction" method="changePlayerForFightersChoice">
+            <result name="success">/vgTournament_fightersChoice.jsp</result>
+        </action>
+        <action name="validateFighters" class="vgTournamentFightersChoiceAction" method="validateFighters">
+            <result type="redirectAction">fight</result>
+        </action>
+        <action name="fight" class="vgTournamentFightAction" method="execute">
+            <result name="success">/vgTournament_fight.jsp</result>
+        </action>
+        <action name="nextRound" class="vgTournamentFightAction" method="nextRound">
+            <result name="success" type="redirectAction">fight</result>
+            <result name="finalResult" type="redirectAction">finalResult</result>
+        </action>
+        <action name="finalResult" class="vgTournamentResultAction" method="execute">
+            <result name="success">/vgTournament_winnerPage.jsp</result>
+        </action>
+    </package>
+
+</struts>
