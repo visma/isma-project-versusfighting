@@ -4,7 +4,7 @@ import org.isma.web.versusfighting.model.Player;
 
 import java.util.Map;
 
-public interface VGTournamentDao {
+public interface VersusFightingDao {
     public Map<Integer, Player> getAvailablePlayerMap();
 
     public Player addPlayer(String player);

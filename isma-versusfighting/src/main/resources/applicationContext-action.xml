@@ -3,22 +3,22 @@
 
 <beans>
     <!-- Versus Fighting Tournament-->
-    <bean id="vgTournamentMenuAction" class="org.isma.web.versusfighting.action.VGTournamentMenuAction">
+    <bean id="versusFightingMenuAction" class="org.isma.web.versusfighting.action.VersusFightingMenuAction">
     </bean>
-    <bean id="vgTournamentPlayersAction" class="org.isma.web.versusfighting.action.VGTournamentPlayersAction">
-        <constructor-arg ref="vgTournamentManager"/>
+    <bean id="versusFightingPlayersAction" class="org.isma.web.versusfighting.action.VersusFightingPlayersAction">
+        <constructor-arg ref="versusFightingManager"/>
     </bean>
-    <bean id="vgTournamentGameSettingsAction" class="org.isma.web.versusfighting.action.VGTournamentGameSettingsAction">
-        <constructor-arg ref="vgTournamentManager"/>
+    <bean id="versusFightingGameSettingsAction" class="org.isma.web.versusfighting.action.VersusFightingGameSettingsAction">
+        <constructor-arg ref="versusFightingManager"/>
     </bean>
-    <bean id="vgTournamentFightersChoiceAction"
-          class="org.isma.web.versusfighting.action.VGTournamentFightersChoiceAction">
-        <constructor-arg ref="vgTournamentManager"/>
+    <bean id="versusFightingFightersChoiceAction"
+          class="org.isma.web.versusfighting.action.VersusFightingFightersChoiceAction">
+        <constructor-arg ref="versusFightingManager"/>
     </bean>
-    <bean id="vgTournamentFightAction" class="org.isma.web.versusfighting.action.VGTournamentFightAction">
-        <constructor-arg ref="vgTournamentManager"/>
+    <bean id="versusFightingFightAction" class="org.isma.web.versusfighting.action.VersusFightingFightAction">
+        <constructor-arg ref="versusFightingManager"/>
     </bean>
-    <bean id="vgTournamentResultAction" class="org.isma.web.versusfighting.action.VGTournamentResultAction">
-        <constructor-arg ref="vgTournamentManager"/>
+    <bean id="versusFightingResultAction" class="org.isma.web.versusfighting.action.VersusFightingResultAction">
+        <constructor-arg ref="versusFightingManager"/>
     </bean>
 </beans>

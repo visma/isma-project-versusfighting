@@ -14,10 +14,10 @@ import org.springframework.orm.hibernate3.LocalSessionFactoryBean;
 import java.util.List;
 
 //TODO faire une version propre, la c'est vraiment pas possible
-public class VGTournamentSchemaGenerationHibernateDao implements VGTournamentSchemaGenerationDao{
+public class VersusFightingSchemaGenerationHibernateDao implements VersusFightingSchemaGenerationDao {
     private SessionFactory sessionFactory;
 
-    public VGTournamentSchemaGenerationHibernateDao(SessionFactory sessionFactory) {
+    public VersusFightingSchemaGenerationHibernateDao(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

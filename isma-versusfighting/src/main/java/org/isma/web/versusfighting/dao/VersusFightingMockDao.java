@@ -5,11 +5,11 @@ import org.isma.web.versusfighting.model.Player;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VGTournamentMockDao implements VGTournamentDao {
+public class VersusFightingMockDao implements VersusFightingDao {
     private int playerIdCurrent = 1;
     private HashMap<Integer, Player> playerMap = new HashMap<Integer, Player>();
 
-    public VGTournamentMockDao() {
+    public VersusFightingMockDao() {
         playerMap.put(1, new Player(1, "isma"));
         playerMap.put(2, new Player(2, "skand"));
         playerMap.put(3, new Player(3, "will"));

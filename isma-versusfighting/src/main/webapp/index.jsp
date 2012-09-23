@@ -10,7 +10,7 @@
 <body>
 <h1>A VersusFighting game manager application</h1>
 
-<p><a href="<s:url action='vgTournament'/>">enter</a></p>
+<p><a href="<s:url action='versusFighting'/>">enter</a></p>
 </body>
 
 </html>

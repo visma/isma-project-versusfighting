@@ -13,45 +13,38 @@
     <link href='http://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" media="screen" href="css/vgTournament.css" type="text/css"/>
-    <title>V-ISMA - Menu</title>
+    <link rel="stylesheet" media="screen" href="css/versusFighting.css" type="text/css"/>
+    <title>V-ISMA - VG Tournament - Tournament Results</title>
     <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $(document).keyup(function (event) {
-                if (event.keyCode == 13) {
-                    $("#form").submit();
-                }
-            });
         });
     </script>
 </head>
 <body>
+<p align="right">
+    <a href="<s:url action='resetGameSession'/>">reinitialisation</a>
+    &nbsp;
+    <a href="<s:url action='todo'/>">statistiques</a>
+</p>
+<br/>
+<br/>
+
+<h1>Résultats</h1>
+
 <div id="superglobal">
     <div id="global">
-        <h1 style="padding-top: 40px;text-align:center;">A VersusFighting Tournament Application</h1>
+        <div style="text-align: center">
+            <p class="videogamefont">Vainqueur : <s:property value="winner.label"/></p>
+            <img style="margin-top: 10px;margin-bottom: 10px;width: 30%;height: 30%;"
+                 src="images/Street_Fighter_Kids_by_imaginism.jpg" alt="">
 
-        <div style="padding-top: 100px;text-align:center;">
-            <s:form id="form" action="next" theme="simple">
-                <p class="videogamefont" style="font-size:36px;text-decoration: blink;">
-                    PRESS ENTER TO CONTINUE
-                </p>
-            </s:form>
+            <p class="videogamefont">Thank you for playing !</p>
         </div>
-        <br/>
     </div>
-    <div id="footer">
-        <p align="center" class="videogamefont" style="text-decoration: blink">
-            insert coins<br/>
-            Credit(s) 0
-        </p>
-
-        <p align="right">
-            <audio controls>
-                <source src="audio/01%20TITLE.ogg" type="audio/ogg"/>
-            </audio>
-        </p>
-    </div>
+    <div id="footer"></div>
 </div>
+<br/>
+
 </body>
 </html>

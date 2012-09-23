@@ -14,7 +14,7 @@
     <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 
 
-    <link rel="stylesheet" media="screen" href="css/vgTournament.css" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="css/versusFighting.css" type="text/css"/>
     <title>V-ISMA - VG Tournament - Game settings</title>
     <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="js/jquery.numeric.js"></script>

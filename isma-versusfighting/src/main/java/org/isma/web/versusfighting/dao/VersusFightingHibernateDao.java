@@ -10,10 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class VGTournamentHibernateDao implements VGTournamentDao {
+public class VersusFightingHibernateDao implements VersusFightingDao {
     private SessionFactory sessionFactory;
 
-    public VGTournamentHibernateDao(SessionFactory sessionFactory) {
+    public VersusFightingHibernateDao(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

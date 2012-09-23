@@ -2,17 +2,17 @@ package org.isma.web.versusfighting.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.isma.web.versusfighting.manager.GameSession;
-import org.isma.web.versusfighting.manager.VGTournamentManager;
+import org.isma.web.versusfighting.manager.VersusFightingManager;
 import org.isma.web.versusfighting.model.AbstractVersusFightingGame;
 
 public abstract class AbstractVersusFightingTournamentAction extends ActionSupport {
-    private VGTournamentManager manager;
+    private VersusFightingManager manager;
 
-    protected AbstractVersusFightingTournamentAction(VGTournamentManager manager) {
+    protected AbstractVersusFightingTournamentAction(VersusFightingManager manager) {
         this.manager = manager;
     }
 
-    protected VGTournamentManager getManager() {
+    protected VersusFightingManager getManager() {
         return manager;
     }
 

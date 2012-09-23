@@ -3,7 +3,7 @@ package org.isma.web.versusfighting.form;
 import org.isma.web.versusfighting.action.FighterSelectionGridsBean;
 import org.isma.web.versusfighting.model.Player;
 
-public class VGTournamentFightersChoiceForm {
+public class VersusFightingFightersChoiceForm {
     private Player choosedPlayer;
     private FighterSelectionGridsBean fighterSelectionGridsBean;
 

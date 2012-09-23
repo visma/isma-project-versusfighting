@@ -3,8 +3,8 @@ package org.isma.web.versusfighting.action;
 import org.apache.commons.collections.Transformer;
 import org.apache.log4j.Logger;
 import org.isma.utils.collections.CollectionHelper;
-import org.isma.web.versusfighting.form.VGTournamentFightersChoiceForm;
-import org.isma.web.versusfighting.manager.VGTournamentManager;
+import org.isma.web.versusfighting.form.VersusFightingFightersChoiceForm;
+import org.isma.web.versusfighting.manager.VersusFightingManager;
 import org.isma.web.versusfighting.model.Fighter;
 import org.isma.web.versusfighting.model.Player;
 
@@ -15,11 +15,11 @@ import java.util.Map;
 
 import static java.lang.String.format;
 
-public class VGTournamentFightersChoiceAction extends AbstractVersusFightingTournamentAction {
-    private static final Logger logger = Logger.getLogger(VGTournamentFightersChoiceAction.class);
-    private VGTournamentFightersChoiceForm form;
+public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTournamentAction {
+    private static final Logger logger = Logger.getLogger(VersusFightingFightersChoiceAction.class);
+    private VersusFightingFightersChoiceForm form;
 
-    public VGTournamentFightersChoiceAction(VGTournamentManager manager) {
+    public VersusFightingFightersChoiceAction(VersusFightingManager manager) {
         super(manager);
     }
 
@@ -29,7 +29,7 @@ public class VGTournamentFightersChoiceAction extends AbstractVersusFightingTour
     //-------------------------------------------------
     @Override
     public String execute() throws Exception {
-        form = new VGTournamentFightersChoiceForm();
+        form = new VersusFightingFightersChoiceForm();
         form.setFighterSelectionGridsBean(new FighterSelectionGridsBean(getPlayerList(), getGame()));
         return SUCCESS;
     }

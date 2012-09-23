@@ -25,55 +25,55 @@
         </action>
 
         <!-- VideoGame Tournament -->
-        <action name="vgTournament" class="vgTournamentMenuAction" method="execute">
-            <result name="success">/vgTournament_menu.jsp</result>
+        <action name="versusFighting" class="versusFightingMenuAction" method="execute">
+            <result name="success">/versusFighting_menu.jsp</result>
         </action>
         <!-- VideoGame Tournament -->
-        <action name="next" class="vgTournamentMenuAction" method="next">
+        <action name="next" class="versusFightingMenuAction" method="next">
             <result name="success" type="redirectAction">playersSelection</result>
         </action>
-        <action name="playersSelection" class="vgTournamentPlayersAction" method="execute">
-            <result name="success">/vgTournament_playersChoice.jsp</result>
+        <action name="playersSelection" class="versusFightingPlayersAction" method="execute">
+            <result name="success">/versusFighting_playersChoice.jsp</result>
         </action>
-        <action name="resetGameSession" class="vgTournamentPlayersAction" method="resetGameSession">
-            <result name="success">/vgTournament_playersChoice.jsp</result>
+        <action name="resetGameSession" class="versusFightingPlayersAction" method="resetGameSession">
+            <result name="success">/versusFighting_playersChoice.jsp</result>
         </action>
-        <action name="savePlayer" class="vgTournamentPlayersAction" method="savePlayer">
-            <result name="success">/vgTournament_playersChoice.jsp</result>
+        <action name="savePlayer" class="versusFightingPlayersAction" method="savePlayer">
+            <result name="success">/versusFighting_playersChoice.jsp</result>
         </action>
-        <action name="registerPlayer" class="vgTournamentPlayersAction" method="registerPlayer">
-            <result name="success">/vgTournament_playersChoice.jsp</result>
+        <action name="registerPlayer" class="versusFightingPlayersAction" method="registerPlayer">
+            <result name="success">/versusFighting_playersChoice.jsp</result>
         </action>
-        <action name="validatePlayers" class="vgTournamentPlayersAction">
+        <action name="validatePlayers" class="versusFightingPlayersAction">
             <result type="redirectAction">gameSettings</result>
         </action>
-        <action name="gameSettings" class="vgTournamentGameSettingsAction" method="execute">
-            <result name="success">/vgTournament_gameSettings.jsp</result>
+        <action name="gameSettings" class="versusFightingGameSettingsAction" method="execute">
+            <result name="success">/versusFighting_gameSettings.jsp</result>
         </action>
-        <action name="validateGameSettings" class="vgTournamentGameSettingsAction" method="validateGameSettings">
+        <action name="validateGameSettings" class="versusFightingGameSettingsAction" method="validateGameSettings">
             <result name="success" type="redirectAction">fightersChoice</result>
         </action>
-        <action name="fightersChoice" class="vgTournamentFightersChoiceAction" method="execute">
-            <result name="success">/vgTournament_fightersChoice.jsp</result>
+        <action name="fightersChoice" class="versusFightingFightersChoiceAction" method="execute">
+            <result name="success">/versusFighting_fightersChoice.jsp</result>
         </action>
-        <action name="validateFightersChoice" class="vgTournamentFightersChoiceAction" method="validateFightersChoice">
-            <result name="success">/vgTournament_fightersChoice.jsp</result>
+        <action name="validateFightersChoice" class="versusFightingFightersChoiceAction" method="validateFightersChoice">
+            <result name="success">/versusFighting_fightersChoice.jsp</result>
         </action>
-        <action name="changePlayerForFightersChoice" class="vgTournamentFightersChoiceAction" method="changePlayerForFightersChoice">
-            <result name="success">/vgTournament_fightersChoice.jsp</result>
+        <action name="changePlayerForFightersChoice" class="versusFightingFightersChoiceAction" method="changePlayerForFightersChoice">
+            <result name="success">/versusFighting_fightersChoice.jsp</result>
         </action>
-        <action name="validateFighters" class="vgTournamentFightersChoiceAction" method="validateFighters">
+        <action name="validateFighters" class="versusFightingFightersChoiceAction" method="validateFighters">
             <result type="redirectAction">fight</result>
         </action>
-        <action name="fight" class="vgTournamentFightAction" method="execute">
-            <result name="success">/vgTournament_fight.jsp</result>
+        <action name="fight" class="versusFightingFightAction" method="execute">
+            <result name="success">/versusFighting_fight.jsp</result>
         </action>
-        <action name="nextRound" class="vgTournamentFightAction" method="nextRound">
+        <action name="nextRound" class="versusFightingFightAction" method="nextRound">
             <result name="success" type="redirectAction">fight</result>
             <result name="finalResult" type="redirectAction">finalResult</result>
         </action>
-        <action name="finalResult" class="vgTournamentResultAction" method="execute">
-            <result name="success">/vgTournament_winnerPage.jsp</result>
+        <action name="finalResult" class="versusFightingResultAction" method="execute">
+            <result name="success">/versusFighting_winnerPage.jsp</result>
         </action>
     </package>
 

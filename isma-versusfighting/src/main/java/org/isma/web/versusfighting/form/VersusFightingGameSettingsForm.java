@@ -1,6 +1,6 @@
 package org.isma.web.versusfighting.form;
 
-public class VGTournamentGameSettingsForm {
+public class VersusFightingGameSettingsForm {
     private int fightersAmount;
     private int matchesAmount;
     private String gameIdentifier;

@@ -1,6 +1,6 @@
 package org.isma.web.versusfighting.form;
 
-public class VGTournamentPlayersForm {
+public class VersusFightingPlayersForm {
     private String newPlayer;
     private int choosedPlayer;
 

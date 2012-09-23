@@ -1,20 +1,20 @@
 package org.isma.web.versusfighting.action;
 
 import org.apache.log4j.Logger;
-import org.isma.web.versusfighting.form.VGTournamentGameSettingsForm;
-import org.isma.web.versusfighting.manager.VGTournamentManager;
+import org.isma.web.versusfighting.form.VersusFightingGameSettingsForm;
+import org.isma.web.versusfighting.manager.VersusFightingManager;
 import org.isma.web.versusfighting.model.AbstractVersusFightingGame;
 import org.isma.web.versusfighting.model.MatchesAmount;
 
 import java.util.Collection;
 import java.util.List;
 
-public class VGTournamentGameSettingsAction extends AbstractVersusFightingTournamentAction {
-    private static final Logger logger = Logger.getLogger(VGTournamentGameSettingsAction.class);
+public class VersusFightingGameSettingsAction extends AbstractVersusFightingTournamentAction {
+    private static final Logger logger = Logger.getLogger(VersusFightingGameSettingsAction.class);
 
-    private VGTournamentGameSettingsForm form = new VGTournamentGameSettingsForm();
+    private VersusFightingGameSettingsForm form = new VersusFightingGameSettingsForm();
 
-    public VGTournamentGameSettingsAction(VGTournamentManager manager) {
+    public VersusFightingGameSettingsAction(VersusFightingManager manager) {
         super(manager);
     }
 

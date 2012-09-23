@@ -2,8 +2,8 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 
-    <bean id="vgTournamentManager" class="org.isma.web.versusfighting.manager.VGTournamentManager">
-        <constructor-arg ref="vgTournamentHibernateDao"/>
-        <constructor-arg ref="vgTournamentSchemaGenerationHibernateDao"/>
+    <bean id="versusFightingManager" class="org.isma.web.versusfighting.manager.VersusFightingManager">
+        <constructor-arg ref="versusFightingHibernateDao"/>
+        <constructor-arg ref="versusFightingSchemaGenerationHibernateDao"/>
     </bean>
 </beans>

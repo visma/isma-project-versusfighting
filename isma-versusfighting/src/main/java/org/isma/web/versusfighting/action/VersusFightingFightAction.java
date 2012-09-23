@@ -1,7 +1,7 @@
 package org.isma.web.versusfighting.action;
 
 import org.apache.log4j.Logger;
-import org.isma.web.versusfighting.manager.VGTournamentManager;
+import org.isma.web.versusfighting.manager.VersusFightingManager;
 import org.isma.web.versusfighting.model.FighterInstance;
 import org.isma.web.versusfighting.model.PlayerInstance;
 
@@ -9,13 +9,13 @@ import java.util.List;
 
 import static java.lang.String.format;
 
-public class VGTournamentFightAction extends AbstractVersusFightingTournamentAction {
-    private static final Logger logger = Logger.getLogger(VGTournamentFightAction.class);
+public class VersusFightingFightAction extends AbstractVersusFightingTournamentAction {
+    private static final Logger logger = Logger.getLogger(VersusFightingFightAction.class);
     public static final String FINAL_RESULT = "finalResult";
 
     private PlayerInstance winner;
 
-    public VGTournamentFightAction(VGTournamentManager manager) {
+    public VersusFightingFightAction(VersusFightingManager manager) {
         super(manager);
     }
 

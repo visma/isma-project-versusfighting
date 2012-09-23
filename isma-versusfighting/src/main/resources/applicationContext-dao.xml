@@ -6,12 +6,12 @@
 
 
     <!-- VGTournament -->
-    <bean id="vgTournamentSchemaGenerationHibernateDao"
-          class="org.isma.web.versusfighting.dao.VGTournamentSchemaGenerationHibernateDao">
+    <bean id="versusFightingSchemaGenerationHibernateDao"
+          class="org.isma.web.versusfighting.dao.VersusFightingSchemaGenerationHibernateDao">
         <constructor-arg ref="sessionFactoryVGTournament"/>
     </bean>
-    <bean id="vgTournamentMockDao" class="org.isma.web.versusfighting.dao.VGTournamentMockDao"/>
-    <bean id="vgTournamentHibernateDao" class="org.isma.web.versusfighting.dao.VGTournamentHibernateDao">
+    <bean id="versusFightingMockDao" class="org.isma.web.versusfighting.dao.VersusFightingMockDao"/>
+    <bean id="versusFightingHibernateDao" class="org.isma.web.versusfighting.dao.VersusFightingHibernateDao">
         <constructor-arg ref="sessionFactoryVGTournament"/>
     </bean>
 

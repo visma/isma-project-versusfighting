@@ -1,21 +1,21 @@
 package org.isma.web.versusfighting.manager;
 
-import org.isma.web.versusfighting.dao.VGTournamentDao;
-import org.isma.web.versusfighting.dao.VGTournamentSchemaGenerationDao;
+import org.isma.web.versusfighting.dao.VersusFightingDao;
+import org.isma.web.versusfighting.dao.VersusFightingSchemaGenerationDao;
 import org.isma.web.versusfighting.model.AbstractVersusFightingGame;
 import org.isma.web.versusfighting.model.Player;
 
 import java.util.Map;
 
-public class VGTournamentManager {
+public class VersusFightingManager {
     private final Map<String, AbstractVersusFightingGame> versusFightingGameMap;
-    private final VGTournamentCache vgTournamentCache;
+    private final VersusFightingCache versusFightingCache;
     private GameSession gameSession = new GameSession();
 
-    public VGTournamentManager(VGTournamentDao vgTournamentDao, VGTournamentSchemaGenerationDao vgTournamentSchemaGenerationDao) throws Exception {
-        this.vgTournamentCache = new VGTournamentCache(vgTournamentDao);
+    public VersusFightingManager(VersusFightingDao versusFightingDao, VersusFightingSchemaGenerationDao versusFightingSchemaGenerationDao) throws Exception {
+        this.versusFightingCache = new VersusFightingCache(versusFightingDao);
         versusFightingGameMap = new VersusFightingGameFactory().buildGameMap();
-        vgTournamentSchemaGenerationDao.generateSchema();
+        versusFightingSchemaGenerationDao.generateSchema();
     }
 
     public Map<String, AbstractVersusFightingGame> getVersusFightingGameMap() {
@@ -24,12 +24,12 @@ public class VGTournamentManager {
 
 
     public Map<Integer, Player> getPlayerMap() {
-        return vgTournamentCache.getPlayerMap();
+        return versusFightingCache.getPlayerMap();
     }
 
 
     public void savePlayer(String newPlayer) {
-        vgTournamentCache.savePlayer(newPlayer);
+        versusFightingCache.savePlayer(newPlayer);
     }
 
     public GameSession getGameSession() {
