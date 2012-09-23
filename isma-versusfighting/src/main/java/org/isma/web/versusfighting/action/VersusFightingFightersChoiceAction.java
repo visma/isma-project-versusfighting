@@ -30,7 +30,7 @@ public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTo
     @Override
     public String execute() throws Exception {
         form = new VersusFightingFightersChoiceForm();
-        form.setFighterSelectionGridsBean(new FighterSelectionGridsBean(getPlayerList(), getGame()));
+        form.setFighterSelectionGridsBean(new FighterSelectionGridsBean(getPlayers(), getGame()));
         return SUCCESS;
     }
 
@@ -45,16 +45,16 @@ public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTo
     }
 
     public String validateFighters() {
-        for (Player player : getPlayerList()) {
-            List<Fighter> fighterList = form.getFighterSelectionGridsBean().getSelectedFighterList(player);
-            getGameSession().registerFighters(player, fighterList);
+        for (Player player : getPlayers()) {
+            List<Fighter> fighters = form.getFighterSelectionGridsBean().getSelectedFighters(player);
+            getGameSession().registerFighters(player, fighters);
         }
         getGameSession().start();
         return SUCCESS;
     }
 
     //-------------------------------------------------
-    public Collection<Player> getPlayerList() {
+    public Collection<Player> getPlayers() {
         return getGameSession().getRegisteredPlayerMap().values();
     }
 
@@ -95,7 +95,7 @@ public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTo
     private Map<Player, List<List<FighterBean>>> buildFighterBeansMap() {
         Map<Player, List<List<FighterBean>>> map = new HashMap<Player, List<List<FighterBean>>>();
         map.put(null, buildFightersBeansNewInstance());
-        for (Player player : getPlayerList()) {
+        for (Player player : getPlayers()) {
             map.put(player, buildFightersBeansNewInstance());
         }
         return map;

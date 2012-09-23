@@ -45,14 +45,14 @@ public class VersusFightingPlayersAction extends AbstractVersusFightingTournamen
 
     //-------------------------------------------------
 
-    public Collection<Player> getAvailablePlayerList() {
+    public Collection<Player> getAvailablePlayers() {
         Collection<Player> playerCollection = new ArrayList<Player>(getManager().getPlayerMap().values());
-        List<Player> registeredPlayerList = getRegisteredPlayerList();
-        playerCollection.removeAll(registeredPlayerList);
+        List<Player> registeredPlayers = getRegisteredPlayers();
+        playerCollection.removeAll(registeredPlayers);
         return playerCollection;
     }
 
-    public List<Player> getRegisteredPlayerList() {
+    public List<Player> getRegisteredPlayers() {
         //From Session
         return new ArrayList<Player>(getGameSession().getRegisteredPlayerMap().values());
     }

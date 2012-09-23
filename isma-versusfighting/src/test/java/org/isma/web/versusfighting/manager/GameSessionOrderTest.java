@@ -42,12 +42,12 @@ public class GameSessionOrderTest extends TestCase {
 
     public void testPlayerOrderP1WinAlways() {
         gameSession.start();
-        List<PlayerInstance> playerInstanceList = gameSession.getPlayerInstanceList();
+        List<PlayerInstance> playerInstances = gameSession.getPlayerInstances();
         Map<Integer, PlayerInstance> playerOrderMap = new HashMap<Integer, PlayerInstance>();
-        playerOrderMap.put(0, playerInstanceList.get(0));
-        playerOrderMap.put(1, playerInstanceList.get(1));
-        playerOrderMap.put(2, playerInstanceList.get(2));
-        playerOrderMap.put(3, playerInstanceList.get(3));
+        playerOrderMap.put(0, playerInstances.get(0));
+        playerOrderMap.put(1, playerInstances.get(1));
+        playerOrderMap.put(2, playerInstances.get(2));
+        playerOrderMap.put(3, playerInstances.get(3));
 
         //Round 1 [Player1 vs Player2] => P1 Win
         assertEquals(playerOrderMap.get(0), gameSession.getPlayer1());
@@ -78,12 +78,12 @@ public class GameSessionOrderTest extends TestCase {
 
     public void testPlayerOrderP1WinThenLose() {
         gameSession.start();
-        List<PlayerInstance> playerInstanceList = gameSession.getPlayerInstanceList();
+        List<PlayerInstance> playerInstances = gameSession.getPlayerInstances();
         Map<Integer, PlayerInstance> playerOrderMap = new HashMap<Integer, PlayerInstance>();
-        playerOrderMap.put(0, playerInstanceList.get(0));
-        playerOrderMap.put(1, playerInstanceList.get(1));
-        playerOrderMap.put(2, playerInstanceList.get(2));
-        playerOrderMap.put(3, playerInstanceList.get(3));
+        playerOrderMap.put(0, playerInstances.get(0));
+        playerOrderMap.put(1, playerInstances.get(1));
+        playerOrderMap.put(2, playerInstances.get(2));
+        playerOrderMap.put(3, playerInstances.get(3));
 
         //Round 1 [Player1 vs Player2] => P1 Win
         assertEquals(playerOrderMap.get(0), gameSession.getPlayer1());

@@ -31,22 +31,22 @@ public class Grid<E> implements Iterable<Map.Entry<Point, E>> {
 
 
     private class InnerIterator<F> implements Iterator<Map.Entry<Point, F>> {
-        private final List<Map.Entry<Point, F>> entryList;
+        private final List<Map.Entry<Point, F>> entries;
         private int index = 0;
 
         private InnerIterator(Map<Point, F> dataMap) {
-            entryList = new ArrayList<Map.Entry<Point, F>>(dataMap.entrySet());
-            Collections.sort(entryList, new EntryComparator());
+            entries = new ArrayList<Map.Entry<Point, F>>(dataMap.entrySet());
+            Collections.sort(entries, new EntryComparator());
         }
 
         @Override
         public boolean hasNext() {
-            return index < entryList.size();
+            return index < entries.size();
         }
 
         @Override
         public Map.Entry<Point, F> next() {
-            return entryList.get(index++);
+            return entries.get(index++);
         }
 
         @Override

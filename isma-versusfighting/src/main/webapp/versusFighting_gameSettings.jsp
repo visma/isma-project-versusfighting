@@ -77,7 +77,7 @@
             &nbsp;
             <a href="<s:url action='todo'/>">statistiques</a>
         </p>
-        <s:iterator var="game" value="gameList">
+        <s:iterator var="game" value="games">
             <s:hidden name="game_%{#game.id}_castingCount" id="game_%{#game.id}_castingCount"
                       value="%{#game.casting.fighterCount}"/>
         </s:iterator>
@@ -90,7 +90,7 @@
                         label="Choix du jeu"
                         headerValue="--- Select a versus fighting game ---"
                         headerKey="-1"
-                        list="gameList"
+                        list="games"
                         listKey="id"
                         listLabel="label"/>
                 <s:textfield id="fightersAmountTextField" name="fightersAmount" value="" label="Nombre de personnages"
@@ -102,7 +102,7 @@
                         label="Nombre de matches"
                         headerValue="--- Select matches amount ---"
                         headerKey="-1"
-                        list="matchesAmountList"
+                        list="matchesAmounts"
                         listKey="amount"
                         listLabel="label"/>
             </table>

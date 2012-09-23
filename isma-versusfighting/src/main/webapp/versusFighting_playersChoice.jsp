@@ -80,7 +80,7 @@
                              label="Player choice"
                              headerValue="--- Select a new challenger ---"
                              headerKey="-1"
-                             list="availablePlayerList"
+                             list="availablePlayers"
                              listKey="id"
                              listLabel="label"
                              id="choosePlayerComboBox"
@@ -94,7 +94,7 @@
         </s:form>
         <h1>Liste des joueurs</h1>
 
-        <s:if test="%{registeredPlayerList.isEmpty()}">
+        <s:if test="%{registeredPlayers.isEmpty()}">
             <div>
                 <p class="videogamefont">Veuillez selectionner des joueurs</p>
             </div>
@@ -105,7 +105,7 @@
                     <tr>
                         <th>Joueur</th>
                     </tr>
-                    <s:iterator var="player" value="registeredPlayerList" status="stat">
+                    <s:iterator var="player" value="registeredPlayers" status="stat">
                         <tr>
                             <td><s:property value="name"/></td>
                         </tr>

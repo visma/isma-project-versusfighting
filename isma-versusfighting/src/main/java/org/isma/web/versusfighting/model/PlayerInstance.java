@@ -6,16 +6,16 @@ import org.apache.commons.collections.Predicate;
 import java.util.List;
 
 public class PlayerInstance extends AbstractAliveInstance<Player> {
-    private List<FighterInstance> fighterInstanceList;
+    private List<FighterInstance> fighterInstances;
 
-    public PlayerInstance(Player object, List<FighterInstance> fighterInstanceList) {
+    public PlayerInstance(Player object, List<FighterInstance> fighterInstances) {
         super(object);
-        this.fighterInstanceList = fighterInstanceList;
+        this.fighterInstances = fighterInstances;
     }
 
     @Override
     public boolean isAlive() {
-        for (FighterInstance fighterInstance : fighterInstanceList) {
+        for (FighterInstance fighterInstance : fighterInstances) {
             if (fighterInstance.isAlive()) {
                 return true;
             }
@@ -28,8 +28,8 @@ public class PlayerInstance extends AbstractAliveInstance<Player> {
         throw new RuntimeException("not implemented");
     }
 
-    public List<FighterInstance> getFighterInstanceList() {
-        return fighterInstanceList;
+    public List<FighterInstance> getFighterInstances() {
+        return fighterInstances;
     }
 
 
@@ -57,7 +57,7 @@ public class PlayerInstance extends AbstractAliveInstance<Player> {
     }
 
     public int getRemainingFightersCount() {
-        return CollectionUtils.countMatches(fighterInstanceList, new Predicate() {
+        return CollectionUtils.countMatches(fighterInstances, new Predicate() {
             @Override
             public boolean evaluate(Object object) {
                 return ((FighterInstance) object).isAlive();

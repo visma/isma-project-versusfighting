@@ -57,10 +57,10 @@
 
         <h1>Tableau de bord du tournoi</h1>
         <table>
-            <s:iterator var="player" value="playerList" status="stat">
+            <s:iterator var="player" value="players" status="stat">
                 <tr>
                     <td><s:property value="#player.label"/></td>
-                    <s:iterator var="fighter" value="fighterInstanceList" status="stat2">
+                    <s:iterator var="fighter" value="fighterInstances" status="stat2">
                         <td>
                             <!-- TODO essayer d'utiliser une variable plutot qu'un gros copié collé -->
                             <s:if test="#fighter.hidden">
@@ -123,7 +123,7 @@
                                 label="Choix du vainqueur"
                                 headerValue="--- Declare Winner ---"
                                 headerKey="-1"
-                                list="fightingPlayerList"
+                                list="fightingPlayers"
                                 listKey="object.id"
                                 listLabel="label"
                                 theme="simple"

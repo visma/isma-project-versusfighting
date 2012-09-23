@@ -44,8 +44,8 @@ public class VersusFightingFightAction extends AbstractVersusFightingTournamentA
     }
 
     public void setWinner(int[] winnerIds) {
-        getGameSession().getPlayerInstanceList();
-        for (PlayerInstance playerInstance : getGameSession().getPlayerInstanceList()) {
+        getGameSession().getPlayerInstances();
+        for (PlayerInstance playerInstance : getGameSession().getPlayerInstances()) {
             if (playerInstance.getObject().getId() == winnerIds[0]) {
                 winner = playerInstance;
             }
@@ -68,12 +68,12 @@ public class VersusFightingFightAction extends AbstractVersusFightingTournamentA
         return getGameSession().getFighterP2();
     }
 
-    public List<PlayerInstance> getPlayerList() {
-        return getGameSession().getPlayerInstanceList();
+    public List<PlayerInstance> getPlayers() {
+        return getGameSession().getPlayerInstances();
     }
 
-    public List<PlayerInstance> getFightingPlayerList() {
-        return getGameSession().getFightingPlayerList();
+    public List<PlayerInstance> getFightingPlayers() {
+        return getGameSession().getFightingPlayers();
     }
 
 

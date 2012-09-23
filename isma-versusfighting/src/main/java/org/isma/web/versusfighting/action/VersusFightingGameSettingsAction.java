@@ -32,11 +32,11 @@ public class VersusFightingGameSettingsAction extends AbstractVersusFightingTour
     }
     //-------------------------------------------------
 
-    public Collection<AbstractVersusFightingGame> getGameList() {
+    public Collection<AbstractVersusFightingGame> getGames() {
         return getManager().getVersusFightingGameMap().values();
     }
 
-    public List<MatchesAmount> getMatchesAmountList() {
+    public List<MatchesAmount> getMatchesAmounts() {
         return MatchesAmount.getList();
     }
 

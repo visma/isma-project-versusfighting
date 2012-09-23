@@ -38,11 +38,11 @@ public class GameSessionEliminationTest extends TestCase {
 
     public void testEliminateAPlayer() {
         gameSession.start();
-        List<PlayerInstance> playerInstanceList = gameSession.getPlayerInstanceList();
+        List<PlayerInstance> playerInstances = gameSession.getPlayerInstances();
         Map<Integer, PlayerInstance> playerOrderMap = new HashMap<Integer, PlayerInstance>();
-        playerOrderMap.put(0, playerInstanceList.get(0));
-        playerOrderMap.put(1, playerInstanceList.get(1));
-        playerOrderMap.put(2, playerInstanceList.get(2));
+        playerOrderMap.put(0, playerInstances.get(0));
+        playerOrderMap.put(1, playerInstances.get(1));
+        playerOrderMap.put(2, playerInstances.get(2));
 
         assertEquals(3, playerOrderMap.get(1).getRemainingFightersCount());
         //Round  [Player1 vs Player2] => P1 Win (Player2 fighters remaining

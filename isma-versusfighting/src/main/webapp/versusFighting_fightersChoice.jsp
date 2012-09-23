@@ -97,7 +97,7 @@
                         label="Joueur "
                         headerValue="--- Choose player for fighters selection ---"
                         headerKey="-1"
-                        list="playerList"
+                        list="players"
                         listKey="id"
                         listLabel="label"
                         value="defaultChoosedPlayerId"

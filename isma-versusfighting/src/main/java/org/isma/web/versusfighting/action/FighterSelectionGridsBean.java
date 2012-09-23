@@ -59,9 +59,9 @@ public class FighterSelectionGridsBean {
         List<List<FighterBean>> data = fighterBeansMap.get(player);
         int x = 0;
         System.out.println("==================================================================");
-        for (List<FighterBean> fighterBeanList : data) {
+        for (List<FighterBean> fighterBeans : data) {
             int y = 0;
-            for (FighterBean fighterBean : fighterBeanList) {
+            for (FighterBean fighterBean : fighterBeans) {
                 System.out.printf("%s => getData(x=%s, y=%s, name=%s)=%s\n",
                         player == null ? "null" : player.getLabel(),
                         x,
@@ -95,16 +95,16 @@ public class FighterSelectionGridsBean {
         return true;
     }
 
-    public List<Fighter> getSelectedFighterList(Player player) {
-        List<Fighter> selectedFighterList = new ArrayList<Fighter>();
+    public List<Fighter> getSelectedFighters(Player player) {
+        List<Fighter> selectedFighters = new ArrayList<Fighter>();
         List<List<FighterBean>> data = fighterBeansMap.get(player);
         for (List<FighterBean> line : data) {
             for (FighterBean fighterBean : line) {
                 if (fighterBean.isSelected()) {
-                    selectedFighterList.add(fighterBean.getFighter());
+                    selectedFighters.add(fighterBean.getFighter());
                 }
             }
         }
-        return selectedFighterList;
+        return selectedFighters;
     }
 }

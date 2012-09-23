@@ -13,7 +13,7 @@ public class GameSession {
     private int fightersAmount;
     private int matchesAmount;
 
-    private List<PlayerInstance> playerInstanceList = new ArrayList<PlayerInstance>();
+    private List<PlayerInstance> playerInstances = new ArrayList<PlayerInstance>();
     private LinkedList<PlayerInstance> playerInstanceQueue = new LinkedList<PlayerInstance>();
     private PlayerInstance player1;
     private PlayerInstance player2;
@@ -28,8 +28,8 @@ public class GameSession {
     }
 
     public void start() {
-        Collections.shuffle(playerInstanceList);
-        playerInstanceQueue.addAll(playerInstanceList);
+        Collections.shuffle(playerInstances);
+        playerInstanceQueue.addAll(playerInstances);
         player1 = playerInstanceQueue.poll();
         player2 = playerInstanceQueue.poll();
         fighterP1 = nextFighter(player1);
@@ -62,7 +62,7 @@ public class GameSession {
 
     private int countPlayerInstanceAlive() {
         int count = 0;
-        for (PlayerInstance playerInstance : playerInstanceList) {
+        for (PlayerInstance playerInstance : playerInstances) {
             count += playerInstance.isAlive() ? 1 : 0;
         }
         return count;
@@ -90,20 +90,20 @@ public class GameSession {
                 return new FighterInstance((Fighter) input, game);
             }
         });
-        playerInstanceList.add(new PlayerInstance(player, (List<FighterInstance>) copyList));
+        playerInstances.add(new PlayerInstance(player, (List<FighterInstance>) copyList));
     }
 
     public List<FighterInstance> getFighterInstanceList(Player player) {
-        for (PlayerInstance playerInstance : playerInstanceList) {
+        for (PlayerInstance playerInstance : playerInstances) {
             if (playerInstance.getObject() == player) {
-                return playerInstance.getFighterInstanceList();
+                return playerInstance.getFighterInstances();
             }
         }
         throw new RuntimeException("player not found !");
     }
 
     private FighterInstance nextFighter(PlayerInstance playerInstance) {
-        List<FighterInstance> copyList = new ArrayList<FighterInstance>(playerInstance.getFighterInstanceList());
+        List<FighterInstance> copyList = new ArrayList<FighterInstance>(playerInstance.getFighterInstances());
         CollectionUtils.filter(copyList, new Predicate() {
             @Override
             public boolean evaluate(Object object) {
@@ -115,8 +115,8 @@ public class GameSession {
     }
 
 
-    public List<PlayerInstance> getPlayerInstanceList() {
-        return playerInstanceList;
+    public List<PlayerInstance> getPlayerInstances() {
+        return playerInstances;
     }
 
     public int getFightersAmount() {
@@ -136,7 +136,7 @@ public class GameSession {
         return countPlayerInstanceAlive() == 1;
     }
 
-    public List<PlayerInstance> getFightingPlayerList() {
+    public List<PlayerInstance> getFightingPlayers() {
         ArrayList<PlayerInstance> list = new ArrayList<PlayerInstance>();
         list.add(player1);
         list.add(player2);
