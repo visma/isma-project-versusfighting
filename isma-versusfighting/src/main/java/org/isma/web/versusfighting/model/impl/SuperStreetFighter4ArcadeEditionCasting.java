@@ -59,6 +59,7 @@ public class SuperStreetFighter4ArcadeEditionCasting extends AbstractVersusFight
             point = new Point(x, y);
         }
 
+        @SuppressWarnings("UnusedDeclaration")
         public String getImageFileName() {
             return fighter.getLabel() + ".gif";
         }
