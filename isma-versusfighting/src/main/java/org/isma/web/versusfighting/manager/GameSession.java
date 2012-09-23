@@ -93,15 +93,6 @@ public class GameSession {
         playerInstances.add(new PlayerInstance(player, (List<FighterInstance>) copyList));
     }
 
-    public List<FighterInstance> getFighterInstanceList(Player player) {
-        for (PlayerInstance playerInstance : playerInstances) {
-            if (playerInstance.getObject() == player) {
-                return playerInstance.getFighterInstances();
-            }
-        }
-        throw new RuntimeException("player not found !");
-    }
-
     private FighterInstance nextFighter(PlayerInstance playerInstance) {
         List<FighterInstance> copyList = new ArrayList<FighterInstance>(playerInstance.getFighterInstances());
         CollectionUtils.filter(copyList, new Predicate() {
