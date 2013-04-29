@@ -1,6 +1,7 @@
 package org.isma.web.versusfighting.action;
 
 import org.apache.commons.collections.Transformer;
+import org.apache.log4j.Logger;
 import org.isma.utils.collections.CollectionHelper;
 import org.isma.web.versusfighting.model.AbstractVersusFightingGame;
 import org.isma.web.versusfighting.model.Fighter;
@@ -8,8 +9,11 @@ import org.isma.web.versusfighting.model.Player;
 
 import java.util.*;
 
+import static java.lang.String.format;
+
 public class FighterSelectionGridsBean {
     private Map<Player, List<List<FighterBean>>> fighterBeansMap;
+    private static final Logger LOGGER = Logger.getLogger(FighterSelectionGridsBean.class);
 
 
     public FighterSelectionGridsBean(Collection<Player> players, AbstractVersusFightingGame game) {
@@ -88,7 +92,7 @@ public class FighterSelectionGridsBean {
                 }
             }
             if (fightersSelected < fightersAmount) {
-                System.out.printf("player[%s] selection : %s/%s\n", otherPlayer.getLabel(), fightersSelected, fightersAmount);
+                LOGGER.debug(format("player[%s] selection : %s/%s\n", otherPlayer.getLabel(), fightersSelected, fightersAmount));
                 return false;
             }
         }

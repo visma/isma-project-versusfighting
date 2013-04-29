@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class VersusFightingGameSettingsAction extends AbstractVersusFightingTournamentAction {
-    private static final Logger logger = Logger.getLogger(VersusFightingGameSettingsAction.class);
+    private static final Logger LOGGER = Logger.getLogger(VersusFightingGameSettingsAction.class);
 
     private VersusFightingGameSettingsForm form = new VersusFightingGameSettingsForm();
 
@@ -23,9 +23,9 @@ public class VersusFightingGameSettingsAction extends AbstractVersusFightingTour
     //  ACTIONS
     //-------------------------------------------------
     public String validateGameSettings() {
-        logger.debug("fighters amount : " + form.getFightersAmount());
-        logger.debug("matches amount : " + form.getMatchesAmount());
-        logger.debug("game : " + form.getGameIdentifier());
+        LOGGER.debug("fighters amount : " + form.getFightersAmount());
+        LOGGER.debug("matches amount : " + form.getMatchesAmount());
+        LOGGER.debug("game : " + form.getGameIdentifier());
         AbstractVersusFightingGame game = getManager().getVersusFightingGameMap().get(form.getGameIdentifier());
         getGameSession().applySettings(form.getFightersAmount(), form.getMatchesAmount(), game);
         return SUCCESS;

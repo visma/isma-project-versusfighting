@@ -10,7 +10,7 @@ import java.util.List;
 import static java.lang.String.format;
 
 public class VersusFightingFightAction extends AbstractVersusFightingTournamentAction {
-    private static final Logger logger = Logger.getLogger(VersusFightingFightAction.class);
+    private static final Logger LOGGER = Logger.getLogger(VersusFightingFightAction.class);
     public static final String FINAL_RESULT = "finalResult";
 
     private PlayerInstance winner;
@@ -37,7 +37,7 @@ public class VersusFightingFightAction extends AbstractVersusFightingTournamentA
         PlayerInstance player2 = getGameSession().getPlayer2();
         FighterInstance fighter1 = getGameSession().getFighterP1();
         FighterInstance fighter2 = getGameSession().getFighterP2();
-        logger.info(format("player1=[%s (%s)], player2=[%s (%s)]\n",
+        LOGGER.info(format("player1=[%s (%s)], player2=[%s (%s)]\n",
                 player1.getLabel(), fighter1.getLabel(), player2.getLabel(), fighter2.getLabel()));
 
         return SUCCESS;

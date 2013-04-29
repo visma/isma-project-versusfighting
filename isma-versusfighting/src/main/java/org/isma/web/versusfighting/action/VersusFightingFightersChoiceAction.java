@@ -16,7 +16,7 @@ import java.util.Map;
 import static java.lang.String.format;
 
 public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTournamentAction {
-    private static final Logger logger = Logger.getLogger(VersusFightingFightersChoiceAction.class);
+    private static final Logger LOGGER = Logger.getLogger(VersusFightingFightersChoiceAction.class);
     private VersusFightingFightersChoiceForm form;
 
     public VersusFightingFightersChoiceAction(VersusFightingManager manager) {
@@ -39,8 +39,7 @@ public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTo
     }
 
     public String changePlayerForFightersChoice() {
-        logger.trace(format("changePlayerForFightersChoice(choosedPlayer=%s)\n", form.getChoosedPlayer()));
-        //form.getFighterSelectionGridsBean().printData(form.getChoosedPlayer());
+        LOGGER.trace(format("changePlayerForFightersChoice(choosedPlayer=%s)\n", form.getChoosedPlayer()));
         return SUCCESS;
     }
 
@@ -60,7 +59,7 @@ public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTo
 
     public void setChoosedPlayer(int[] players) {
         Player choosedPlayer = getGameSession().getRegisteredPlayerMap().get(players[0]);
-        logger.trace(format("setChoosedPlayer(%s)\n", choosedPlayer == null ? "" : choosedPlayer.getLabel()));
+        LOGGER.trace(format("setChoosedPlayer(%s)\n", choosedPlayer == null ? "" : choosedPlayer.getLabel()));
         form.setChoosedPlayer(choosedPlayer);
     }
 
@@ -91,15 +90,6 @@ public class VersusFightingFightersChoiceAction extends AbstractVersusFightingTo
         return form.getFighterSelectionGridsBean().isSelectionOverForPlayers(form.getChoosedPlayer(), getGameSession().getFightersAmount());
     }
 
-
-    private Map<Player, List<List<FighterBean>>> buildFighterBeansMap() {
-        Map<Player, List<List<FighterBean>>> map = new HashMap<Player, List<List<FighterBean>>>();
-        map.put(null, buildFightersBeansNewInstance());
-        for (Player player : getPlayers()) {
-            map.put(player, buildFightersBeansNewInstance());
-        }
-        return map;
-    }
 
     private List<List<FighterBean>> buildFightersBeansNewInstance() {
         List gridData = getGame().getCasting().buildGridData();
